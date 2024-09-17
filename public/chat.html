@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!-- Chat Header -->
+    <div class="chat-header">
+        <div class="room-name" id="roomName">Room</div>
+        <div class="user-name" id="userName">User</div>
+        <!-- <button class="members-toggle" id="toggleMembers">Members</button> -->
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <!-- Member List Section -->
+        <div class="member-list" id="memberList">
+            <!-- Dynamically populated member list -->
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <div id="chatBox" class="chat-box">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type a message" />
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Socket.io Script -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

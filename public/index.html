@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Chat Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome</h1>
+
+    <!-- User name input -->
+    <div class="input-group">
+      <label for="username">Enter Your Name:</label>
+      <input type="text" id="username" placeholder="Your name" />
+      <span id="nameError" class="error-message"></span> 
+    </div>
+
+    <!-- Existing rooms dropdown -->
+    <div class="input-group">
+      <label for="rooms">Choose a Room:</label>
+      <select id="rooms">
+        
+        <!-- Add more rooms here dynamically if needed -->
+      </select>
+      <span id="roomError" class="error-message"></span> 
+    </div>
+
+    <!-- create a new room -->
+    <div class="input-group">
+        <label for="newRoom">Create a New Room:</label>
+        <div class="create-input">
+            <input type="text" id="newRoom" placeholder="New room name" />
+            <button id="createRoomBtn">Create</button>
+        </div>
+        <span id="roomError" class="error-message"></span> 
+        <span id="roomSuccess" class="success-message"></span> 
+        
+    </div>
+
+
+    <!-- Join button -->
+    <div class="input-group">
+      <button id="joinBtn">Join</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* Chat Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: hsl(211, 100%, 50%);
+    color: white;
+}
+
+/* Room and User Names */
+.room-name {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+/* Chat Container Layout */
+.chat-container {
+    display: flex;
+    height: 90vh;
+    padding: 10px; /* Add padding around the container */
+    box-sizing: border-box; /* Ensure padding does not affect overall width */
+}
+
+/* Member List Section */
+.member-list {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    padding-top: 30px;
+    border-right: 1px solid #ccc;
+    overflow-y: scroll;
+}
+
+/* Member Box Styling */
+.member-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.member-box:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+    border: 2px solid black;
+    color: white;
+}
+
+/* Chat Section */
+.chat-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Chat Messages */
+.chat-box {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box div {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+/* Chat Input */
+.input-container {
+    display: flex;
+}
+
+#messageInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+#sendMessage {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* My messages on the right */
+.my-message {
+    align-self: flex-end;
+    background-color: #d9edf7;
+    color: black;
+}
+
+/* Other users' messages on the left */
+.other-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* System messages (join/leave) centered */
+.system-message {
+    text-align: center;
+    align-self: center;
+    background-color: #e9e9e9;
+    color: #666;
+    font-style: italic;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+
+/* Responsive Design for Mobile */
+/* Responsive Design for Mobile */
+/* Responsive Design for Mobile */
+/* General Reset for Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Full height of the viewport */
+        padding: 0;
+        margin: 0; /* No margin */
+        overflow: hidden; /* Prevent overall page scrolling */
+    }
+
+    .member-list {
+        display: none; /* Hide member list on mobile */
+    }
+
+    .chat-header {
+        padding: 10px;
+        position: fixed; /* Fix header at the top */
+        top: 0;
+        width: 100%; /* Full width */
+        z-index: 1; /* Ensure it stays on top of other content */
+        overflow: hidden; /* Prevent overflow from header */
+    }
+
+    .chat-section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Ensure chat section grows to take available space */
+        margin-top: 60px; /* Adjust margin-top to make space for header */
+        overflow: hidden; /* Prevent overflow from chat section */
+    }
+
+    .chat-box {
+        flex-grow: 1; /* Make chat box take up all remaining space */
+        overflow-y: auto; /* Allow scrolling for messages */
+        padding: 10px;
+        margin-bottom: 0; /* No margin at the bottom */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .input-container {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        position: fixed; /* Fix input container at the bottom */
+        bottom: 0;
+        width: 100%; /* Ensure it spans the full width */
+        background-color: white;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Add shadow for visual separation */
+        overflow: hidden; /* Prevent overflow from input container */
+    }
+
+    .chat-box div {
+        max-width: calc(100% - 20px); /* Ensure messages fit within the chat box */
+        overflow-wrap: break-word; /* Break long words */
+    }
+}
